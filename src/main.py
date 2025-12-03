@@ -1,16 +1,11 @@
-# This is a sample Python script.
+from src.input import input_function
+from src.email_validation import email_validation
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+try:
 
+    email = input_function()
+    print(f"email: {email}")
+    print(email_validation(email))
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+except Exception as e:
+    print(e)
